@@ -1,0 +1,35 @@
+{
+  "name": "LocalLauncher",
+  "version": "1.0.0",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder"
+  },
+  "dependencies": {
+    "axios": "^1.12.2",
+    "cors": "^2.8.5",
+    "express": "^4.21.2"
+  },
+  "devDependencies": {
+    "electron": "^29.4.6",
+    "electron-builder": "^23.6.0"
+  },
+  "build": {
+    "appId": "com.example.locallauncher",
+    "productName": "LocalLauncher",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "main.js",
+      "preload.js",
+      "api/**"
+    ],
+    "win": {
+      "target": [
+        "nsis"
+      ]
+    }
+  }
+}
